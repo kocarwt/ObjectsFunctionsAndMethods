@@ -20,7 +20,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #   Then run this module and look for more TO DO's later in the file.
 ########################################################################
 
-import rosegraphics as rg
+import rosegraphics as rg, random
 
 
 def main():
@@ -33,9 +33,11 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
+
 
     window.close_on_mouse_click()
 
@@ -70,7 +72,7 @@ def turtle2():
     # Then choose a RANDOM starting point for the motion in here.
     i_began_here = rg.Point(grace.x_cor(), grace.y_cor())
     i_am_going_here = rg.Point(random.randrange(-500, 500),
-                               random.randrange(-300, 0))
+                               random.randrange(-300,0 ))
     grace.pen_up()
     grace.go_to(i_am_going_here)
     grace.pen_down()
@@ -100,6 +102,16 @@ def turtle3():
     maja.begin_fill()
     maja.draw_circle(50)
     maja.end_fill()
+
+def turtle4():
+    will = rg.SimpleTurtle()
+    will.pen = rg.Pen('red', 10)
+
+    will.forward(100)
+
+    will.begin_fill()
+    will.draw_circle(100)
+    will.end_fill()
 
 
 ########################################################################
@@ -136,7 +148,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 3.
+# Done: 3.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -166,7 +178,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 4.
+# Done: 4.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
