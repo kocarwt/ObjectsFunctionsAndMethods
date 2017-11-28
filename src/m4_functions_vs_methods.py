@@ -195,7 +195,7 @@ def try_functions(x1,y1,x2,y2):
     tom.pen_up()
     tom.go_to(rg.Point(x1,y1))
 
-    
+
 
 
     """
