@@ -37,6 +37,7 @@ def main():
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
 
     window.close_on_mouse_click()
@@ -103,6 +104,7 @@ def turtle3():
     maja.draw_circle(50)
     maja.end_fill()
 
+
 def turtle4():
     will = rg.SimpleTurtle()
     will.pen = rg.Pen('red', 10)
@@ -112,6 +114,27 @@ def turtle4():
     will.begin_fill()
     will.draw_circle(100)
     will.end_fill()
+
+
+def turtle5():
+    steve = rg.SimpleTurtle()
+    steve.pen = rg.Pen('blue', 20)
+
+    steve.backward(300)
+
+    steve.begin_fill()
+    steve.draw_square(100)
+    steve.end_fill()
+
+    tom = rg.SimpleTurtle()
+    tom.pen = rg.Pen('green', 20)
+
+    tom.right(90)
+    tom.forward(100)
+
+    tom.begin_fill()
+    tom.draw_square(200)
+    tom.end_fill()
 
 
 ########################################################################
@@ -194,7 +217,7 @@ def turtle4():
 
 ########################################################################
 #
-# TODO: 5.
+# Done: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
