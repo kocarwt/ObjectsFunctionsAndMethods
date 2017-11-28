@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and William Kocar.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
-# TODO: 2.
+# :Done 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -80,6 +80,8 @@ def main():
     turtle = rg.SimpleTurtle('square')
     draw_many_squares(turtle, 3, 75, 15)
     turtle3()
+    try_methods()
+    try_functions(200,100,300,30)
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
@@ -162,6 +164,13 @@ def turtle3():
 
 
 def try_methods():
+    will = rg.SimpleTurtle()
+    will.pen = rg.Pen('brown', 5)
+
+    will.forward(150)
+    will.left(90)
+    will.forward(50)
+    will.backward(100)
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -172,13 +181,23 @@ def try_methods():
       -- backward  100 units
     """
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
 
 
-def try_functions():
+def try_functions(x1,y1,x2,y2):
+    tom = rg.SimpleTurtle()
+    tom.pen = rg.Pen('red', 10)
+    tom.speed=5
+
+    tom.pen_up()
+    tom.go_to(rg.Point(x1,y1))
+
+    
+
+
     """
     Causes several SimpleTurtles to do the following:
      -- One jumps to (200, 100), then moves (while drawing) to (300, 30)
