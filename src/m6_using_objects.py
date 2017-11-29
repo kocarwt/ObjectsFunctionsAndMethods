@@ -14,6 +14,7 @@ import rosegraphics as rg
 def main():
     two_circles()
     circle_and_rectangle()
+    lines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -64,16 +65,18 @@ def circle_and_rectangle():
     circle.fill_color = 'blue'
     circle.attach_to(window2)
 
-    point1 = (200, 50)
-    point2 = (250, 150)
+    point1 = rg.Point(200, 50)
+    point2 = rg.Point(250, 150)
     rectangle = rg.Rectangle(point1, point2)
     rectangle.attach_to(window2)
 
     window2.render()
     thickness = rectangle.outline_thickness
     fill_color = rectangle.fill_color
-    center = rectangle.get_center
-    print(thickness, fill_color, center,)
+    center = rectangle.get_center()
+    centerx = center.x
+    centery = center.y
+    print(thickness, fill_color, center,centerx,centery)
     print(rectangle)
     window2.close_on_mouse_click()
 
@@ -108,7 +111,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -121,10 +124,19 @@ def circle_and_rectangle():
 def lines():
     window = rg.RoseWindow()
 
-    steve= rg.Line((50, 80), (70, 100))
-    steve.pen = rg.Pen('red')
+    steve = rg.Line(rg.Point(50, 80), rg.Point(100, 150))
     steve.attach_to(window)
 
+    will = rg.Line(rg.Point(200,100), rg.Point(270,170))
+    will.pen = rg.Pen('red',20)
+    will.attach_to(window)
+    window.render()
+    center= will.get_midpoint()
+    centerx = center.x
+    centery = center.y
+    print(center)
+    print(centerx)
+    print(centery)
     window.close_on_mouse_click()
 
     """
