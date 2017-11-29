@@ -35,9 +35,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #     d. Write a line of code that construct a RoseWindow object whose height is 100 with any width you choose.
 #         (again try to use PyCharm's hints to help you figure it out)
-#               width = 400
-#               height = 100
-#               window = rg.RoseWindow(width, height)
+#               window = rg.RoseWindow(400,100)
 #
 #     e. Use the DOT trick to answer the following:
 #
