@@ -52,7 +52,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #               fill color, outline color, outline thickness
 #
 #     f. What does a RoseWindow RENDER method do?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            draws all the objects attached to this window
 #
 #     g. When is a RoseWindow close_on_mouse_click method call necessary?  Why?
 #            When you want to show something for a longer time without the window closing right after the program ends
